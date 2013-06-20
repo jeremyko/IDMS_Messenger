@@ -1,0 +1,316 @@
+
+-- KM_DOCUSER 에 대화명 항목 추가했음.
+
+ALTER TABLE KM_DOCUSER ADD NICK_NAME VARCHAR2(100)
+
+//////////////////////////////
+
+
+-- 대화상대 정보
+CREATE TABLE BUDDY_LIST
+(
+  USER_ID       VARCHAR2(20)                    NOT NULL,
+  COMPANION_ID  VARCHAR2(20)                    NOT NULL,
+  REG_DATE      DATE                            DEFAULT SYSDATE,
+  COMP_GROUP    VARCHAR2(50)                    NOT NULL,
+  KIND          VARCHAR2(1)                     DEFAULT '1'
+)
+TABLESPACE CCR_DATA
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL;
+
+
+CREATE UNIQUE INDEX PK_BUDDY_LIST ON BUDDY_LIST
+(USER_ID, COMPANION_ID)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+CREATE INDEX TX_BUDDT_LIST_01 ON BUDDY_LIST
+(COMPANION_ID)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+ALTER TABLE BUDDY_LIST ADD (
+  CONSTRAINT PK_BUDDY_LIST PRIMARY KEY (USER_ID, COMPANION_ID)
+    USING INDEX 
+    TABLESPACE CCR_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          1M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+////////////////////////////
+-- 대화상대 그룹
+
+CREATE TABLE BUDDY_GRP
+(
+  USER_ID     VARCHAR2(20)                      NOT NULL,
+  COMP_GROUP  VARCHAR2(50)                      NOT NULL
+)
+TABLESPACE CCR_DATA
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL;
+
+
+CREATE UNIQUE INDEX PK_BUDDT_GRP ON BUDDY_GRP
+(USER_ID, COMP_GROUP)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+ALTER TABLE BUDDY_GRP ADD (
+  CONSTRAINT PK_BUDDT_GRP PRIMARY KEY (USER_ID, COMP_GROUP)
+    USING INDEX 
+    TABLESPACE CCR_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          1M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+               
+               
+               
+//////////////////////////
+-- 쪽지 저장
+CREATE TABLE BUDDY_MSG
+(
+  FROM_ID   VARCHAR2(20)                        NOT NULL,
+  TO_ID     VARCHAR2(20)                        NOT NULL,
+  REG_DATE  DATE                                DEFAULT SYSDATE               NOT NULL,
+  CHKED     VARCHAR2(1)                         DEFAULT 'N',
+  MSG       VARCHAR2(1024)
+)
+TABLESPACE CCR_DATA
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL;
+
+
+CREATE UNIQUE INDEX PK_BUDDY_MSG ON BUDDY_MSG
+(FROM_ID, TO_ID, REG_DATE)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+CREATE INDEX TX_BUDDY_MSG_01 ON BUDDY_MSG
+(CHKED)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+ALTER TABLE BUDDY_MSG ADD (
+  CONSTRAINT PK_BUDDY_MSG PRIMARY KEY (FROM_ID, TO_ID, REG_DATE)
+    USING INDEX 
+    TABLESPACE CCR_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          1M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+               
+//////////////////////////////
+-- 정보친구
+
+CREATE TABLE IT_BUDDY_LIST
+(
+  USER_ID   VARCHAR2(20)                        NOT NULL,
+  IT_NAME   VARCHAR2(100)                       NOT NULL,
+  IT_INFO   VARCHAR2(300)                       NOT NULL,
+  REG_DATE  DATE                                DEFAULT SYSDATE
+)
+TABLESPACE CCR_DATA
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL;
+
+
+CREATE UNIQUE INDEX PK_IT_BUDDY_LIST ON IT_BUDDY_LIST
+(USER_ID, IT_NAME)
+LOGGING
+TABLESPACE CCR_DATA
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          1M
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+ALTER TABLE IT_BUDDY_LIST ADD (
+  CONSTRAINT PK_IT_BUDDY_LIST PRIMARY KEY (USER_ID, IT_NAME)
+    USING INDEX 
+    TABLESPACE CCR_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          1M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+               

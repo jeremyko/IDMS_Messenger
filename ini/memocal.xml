@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="EUC-KR" standalone="yes"?>
+<!--XML data for Memo Calendar Application-->
+<memos version="1.0">
+	<memo year="2007" month="06" day="06" icon="16">
+		<title>아아아</title>
+		<content>2222</content>
+	</memo>
+</memos>

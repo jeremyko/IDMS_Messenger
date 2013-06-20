@@ -1,0 +1,24 @@
+클라이언트 로그인시 서버요청 순서
+
+1.  LOGIN                  [058] -> 인증처리
+2.  GET_BUDDY_GRP          [003] -> 그룹
+3.  GET_BUDDY_LIST         [004] -> 대화상대
+4.  GET_SLIP_MSG           [051] -> 쪽지
+
+
+//login dlg
+LOGIN / doSqlRsltWork_7 / RequestLogIn / doWork_LOGIN / CLogInDlg::OnLogInRslt(WPARAM wParam, LPARAM lParam)
+
+// 아래 4 개는 현재 처리안됨.(불필요 SQL 막았음)
+RAWSQL_SAVE_LAST_IP / doSqlRsltWork_9/ BOOL CChatSession::doWork_RAWSQL_SAVE_LAST_IP( char* data) / LRESULT CLogInDlg::OnSaveLastIPRslt(WPARAM wParam, LPARAM lParam) / 
+RAWSQL_JOB_GN    / doSqlRsltWork_7/ BOOL CChatSession::doWork_RAWSQL_JOB_GN (char* data) / LRESULT CLogInDlg::OnJobGnRslt(WPARAM wParam, LPARAM lParam)
+    위에서 종료하거나 
+RAWSQL_DAILYJOB_MST /doSqlRsltWork_7/ BOOL CChatSession::doWork_RAWSQL_DAILYJOB_MST (char* data)   / LRESULT CLogInDlg::OnDailyJobMstRslt(WPARAM wParam, LPARAM lParam)    
+RAWSQL_INSERT_LOGONTIME /doSqlRsltWork_9   / BOOL CChatSession::doWork_RAWSQL_INSERT_LOGONTIME( char* data) / LRESULT CLogInDlg::OnInsertLogOnTmRslt(WPARAM wParam, LPARAM lParam)
+    
+//idmsdlg
+RequestBuddyGrp  / doSqlRsltWork_5  / doWork_GetBuddyGrp / OnBuddyGrpRslt
+RequestBuddyList / doSqlRsltWork_GET_BUDDY_LIST/  GET_BUDDY_LIST / doWork_GetBuddyList / OnBuddyListRslt
+RequestSlipMsg / doSqlRsltWork_5 / doWork_GET_SLIP_MSG
+
+

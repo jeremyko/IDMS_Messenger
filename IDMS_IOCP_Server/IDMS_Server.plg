@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IDMS_Server - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP10B.tmp" with contents
+[
+/nologo /o"../Debug/IDMS_Server/IDMS_Server.bsc" 
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\StdAfx.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\ControlPos.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\DbLoginDlg.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\FoodMenuDlg.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\IDMS_Server.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\IDMS_ServerDlg.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\INIManager.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\iocp_server.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\Log.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\MemoryPool.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\OraObjectArray.sbr
+\DATA\My_Dev\IDMS_MSN\Debug\IDMS_Server\ServerGlobal.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP10B.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+IDMS_Server.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

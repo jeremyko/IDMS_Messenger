@@ -1,0 +1,337 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\IDMS_Server.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\IDMS_Server.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IDMS_Server 정보"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "IDMS_Server 버전 1.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "jeremyko.cafe24.com",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_IDMS_SERVER_DIALOG DIALOGEX 0, 0, 310, 265
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IDMS_Server"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP,4,57,301,178,WS_EX_STATICEDGE
+    PUSHBUTTON      "서 버 종 료",IDC_BUTTON_EXIT,264,241,38,19,BS_FLAT
+    LTEXT           "현재 접속",IDC_STATIC,9,25,31,8
+    EDITTEXT        IDC_EDIT_CONNECTION,8,36,31,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update User",IDC_BTN_UPDATE_USER_LIST,49,241,43,19,
+                    BS_FLAT
+    PUSHBUTTON      "화면 Clear",IDC_BTN_CLEAR_LIST,4,241,43,19,BS_FLAT
+    PUSHBUTTON      "식당메뉴",IDC_BTN_FOOD,94,241,43,19,BS_FLAT
+    CONTROL         "Display Log (성능 영향 있음)",IDC_CHECK_LOG,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,51,25,107,9
+    EDITTEXT        IDC_EDIT_FILTER_IP1,114,37,56,12,ES_AUTOHSCROLL
+    CONTROL         "IP Addr. Filter",IDC_CHECK_FILTERIP,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,51,39,57,9
+    EDITTEXT        IDC_EDIT_FILTER_IP2,174,37,56,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC_GRP_LOG,4,0,302,54
+    LTEXT           "서버 시작 시간 : ",IDC_STATIC_RUNTIME,9,10,149,10
+END
+
+IDD_DLG_DB_LOGIN DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "DB 로그인"
+FONT 9, "굴림체"
+BEGIN
+    EDITTEXT        IDC_EDIT_CONNECTION,61,7,119,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,61,24,119,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWD,61,41,119,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "로그인",IDC_BTN_DB_LOGIN,57,68,58,19,BS_FLAT
+    PUSHBUTTON      "취소",IDC_BTN_CANCEL,122,68,58,19,BS_FLAT
+    LTEXT           "사용자",IDC_STATIC,7,24,51,11
+    LTEXT           "연결",IDC_STATIC,7,7,51,11
+    LTEXT           "비밀번호",IDC_STATIC,7,41,51,11
+END
+
+IDD_DLG_FOOD DIALOGEX 0, 0, 393, 270
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "식장메뉴저장 ^^"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDIT_1stLunchMenu,68,43,275,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_1stDinnerMenu,68,61,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_2ndLunchMenu,68,81,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_2ndDinnerMenu,68,99,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_3rdLunchMenu,68,120,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_3rdDinnerMenu,68,138,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_4thLunchMenu,68,158,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_4thDinnerMenu,68,176,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_5thLunchMenu,68,196,275,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_5thDinnerMenu,68,214,275,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "저 장",IDC_BTN_SAVE,273,240,54,22
+    PUSHBUTTON      "취 소",IDC_BTN_CANCEL,333,240,54,22
+    CONTROL         "20080101",IDC_STATIC_11,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,11,44,28,8,WS_EX_TRANSPARENT
+    CONTROL         "12",IDC_STATIC_12,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,35,44,8,8,WS_EX_TRANSPARENT
+    CONTROL         "21",IDC_STATIC_21,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    11,83,28,8,WS_EX_TRANSPARENT
+    CONTROL         "22",IDC_STATIC_22,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,35,82,8,8,WS_EX_TRANSPARENT
+    CONTROL         "31",IDC_STATIC_31,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    11,121,28,8,WS_EX_TRANSPARENT
+    CONTROL         "32",IDC_STATIC_32,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,35,122,8,8,WS_EX_TRANSPARENT
+    CONTROL         "41",IDC_STATIC_41,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    11,159,28,8,WS_EX_TRANSPARENT
+    CONTROL         "42",IDC_STATIC_42,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,35,159,8,8,WS_EX_TRANSPARENT
+    CONTROL         "51",IDC_STATIC_51,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    11,197,28,8,WS_EX_TRANSPARENT
+    CONTROL         "52",IDC_STATIC_52,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,35,197,8,8,WS_EX_TRANSPARENT
+    CONTROL         "DateTimePicker2",IDC_DATESELECT,"SysDateTimePick32",
+                    DTS_UPDOWN | DTS_LONGDATEFORMAT | WS_DISABLED | 
+                    WS_TABSTOP,11,18,105,13
+    GROUPBOX        "시작일",IDC_STATIC,7,7,381,30
+    EDITTEXT        IDC_EDIT_1stLunchCal,347,43,23,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_1stDinnerCal,347,62,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_2ndLunchCal,347,81,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_2ndDinnerCal,347,99,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_3rdLunchCal,347,120,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_3rdDinnerCal,347,138,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_4thLunchCal,347,158,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_4thDinnerCal,347,176,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_5thLunchCal,347,196,23,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_5thDinnerCal,347,214,23,13,ES_AUTOHSCROLL
+    CONTROL         "cal.",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    373,45,12,11,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,43,36,345,43
+    GROUPBOX        "",IDC_STATIC,43,74,345,43
+    GROUPBOX        "",IDC_STATIC,43,112,345,43
+    GROUPBOX        "",IDC_STATIC,43,150,345,43
+    GROUPBOX        "",IDC_STATIC,43,188,345,43
+    GROUPBOX        "",IDC_STATIC,7,36,37,43
+    LTEXT           "월",IDC_STATIC,20,58,8,8
+    GROUPBOX        "",IDC_STATIC,7,74,37,43
+    GROUPBOX        "",IDC_STATIC,7,112,37,43
+    GROUPBOX        "",IDC_STATIC,7,150,37,43
+    GROUPBOX        "",IDC_STATIC,7,188,37,43
+    LTEXT           "중식",IDC_STATIC,49,46,14,9
+    LTEXT           "석식",IDC_STATIC,49,63,14,9
+    LTEXT           "화",IDC_STATIC,20,97,8,8
+    LTEXT           "중식",IDC_STATIC,49,84,14,9
+    LTEXT           "석식",IDC_STATIC,49,102,14,9
+    LTEXT           "수",IDC_STATIC,20,136,8,8
+    LTEXT           "중식",IDC_STATIC,49,123,14,9
+    LTEXT           "석식",IDC_STATIC,49,141,14,9
+    LTEXT           "목",IDC_STATIC,20,174,8,8
+    LTEXT           "중식",IDC_STATIC,49,161,14,9
+    LTEXT           "석식",IDC_STATIC,49,179,14,9
+    LTEXT           "금",IDC_STATIC,20,211,8,8
+    LTEXT           "중식",IDC_STATIC,49,198,14,9
+    LTEXT           "석식",IDC_STATIC,49,216,14,9
+    PUSHBUTTON      "불러오기",IDC_BTN_LOAD,213,240,54,22
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "FileDescription", "IDMS_Server MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "IDMS_Server\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "OriginalFilename", "IDMS_Server.EXE\0"
+            VALUE "ProductName", "IDMS_Server 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_IDMS_SERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 305
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_DLG_DB_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DLG_FOOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "IDMS_Server 정보(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 소켓 초기화에 실패하였습니다."
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\IDMS_Server.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

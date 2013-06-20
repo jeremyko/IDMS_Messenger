@@ -1,0 +1,7 @@
+; sec2_DLL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "sec2_DLL"
+DESCRIPTION  'sec2_DLL Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

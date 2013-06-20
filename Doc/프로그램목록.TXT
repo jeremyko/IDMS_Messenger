@@ -1,0 +1,10 @@
+
+IDMS_Server : 서버프로그램
+IdmsMsn : 클라이언트     
+UpdateManager : 프로그램 업데이트용
+FoodMenuConvert : 식당메뉴 xls 파일을 txt 파일로 변환. (C#)
+     서버의 식당메뉴에서 이파일을 불러오기하여 
+     클라이언트에게 제공. 불러오기 대신 직접, 서버의 식당메뉴에서 저장해도 된다. 
+     설치하기 위해서는 deploy 폴더안의 setup.exe 실행.
+     
+     컴파일 하기 위해서는 SmartXLS 가 설치되어있어야함.( http://www.smartxls.com/ )

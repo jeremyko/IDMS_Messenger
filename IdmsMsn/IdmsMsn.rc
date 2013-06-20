@@ -1,0 +1,875 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\IdmsMsn.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\IdmsMsn.ico"
+IDI_ICON_SENDALLMSG_OK  ICON    DISCARDABLE     "res\\SENDOK.ICO"
+IDI_ICON_SENDALLMSG_FAIL ICON    DISCARDABLE     "res\\SENDFAIL.ICO"
+IDI_ICON_SENDALLMSG_DEFAULT ICON    DISCARDABLE     "res\\DEFAULT.ico"
+IDI_ICON_CHK_ON         ICON    DISCARDABLE     "res\\icon_chk_ON.ico"
+IDI_ICON_CHK_OFF        ICON    DISCARDABLE     "res\\icon_CHK_OFF.ico"
+IDI_ICON_PIN1           ICON    DISCARDABLE     "res\\pin1.ico"
+IDI_ICON_PIN2           ICON    DISCARDABLE     "res\\pin2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IdmsMsn 정보"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "* IDMS Messenger 버전 1.1\r\n* 스케쥴관리(Memocal) by 데브피아 공개소스  참조(curealls) ",
+                    IDC_STATIC,40,10,124,28,SS_NOPREFIX
+    DEFPUSHBUTTON   "확인",IDOK,176,7,52,23,BS_FLAT | WS_GROUP
+END
+
+IDD_IDMSMSN_DIALOG DIALOGEX 0, 0, 198, 289
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IDMS Messenger"
+MENU IDR_MENU_MSGER
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREECTRL,"SysTreeView32",TVS_NONEVENHEIGHT | 
+                    WS_TABSTOP,35,34,153,232,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "내상태",IDC_BTN_MY_STATUS,29,10,13,11,BS_BITMAP,
+                    WS_EX_TRANSPARENT
+    LTEXT           "",IDC_STATIC_MY_NICK,44,11,145,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Sec1",IDC_BTN_SEC1,2,39,32,32,BS_BITMAP
+    PUSHBUTTON      "Sec2",IDC_BTN_SEC2,2,71,32,32,BS_BITMAP
+    PUSHBUTTON      "Sec3",IDC_BTN_SEC3,2,103,32,32,BS_BITMAP
+END
+
+IDD_DIALOG_LOGIN DIALOGEX 0, 0, 223, 216
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ED_ID,54,120,92,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_PWD,54,142,92,17,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "로그인",IDC_BTN_LOGIN,153,120,65,37,BS_FLAT
+    PUSHBUTTON      "신규등록",IDC_BTN_REG_USER,11,166,65,22,BS_FLAT
+    PUSHBUTTON      "비밀번호변경",IDC_BTN_CHG_PWD,80,166,65,22,BS_FLAT
+    PUSHBUTTON      "종료",IDC_BTN_CLOSE,153,166,65,22,BS_FLAT
+    PUSHBUTTON      "ID확인",IDC_BTN_NEW_LOGIN,161,142,57,15,NOT WS_VISIBLE
+    CONTROL         146,IDC_STATIC,"Static",SS_BITMAP,11,120,40,17
+    CONTROL         147,IDC_STATIC,"Static",SS_BITMAP,11,142,40,17
+    LTEXT           "",IDC_STATIC_LOGIN_MSG,12,197,200,15,NOT WS_GROUP,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_DIALOG_NEW_COMPANION DIALOG DISCARDABLE  0, 0, 339, 321
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "대화 상대 추가"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDIT_COMP_ID,44,56,82,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_GRP_SET,54,7,108,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "추 가",IDC_BTN_ADD,166,290,45,21,BS_FLAT
+    PUSHBUTTON      "확 인",IDC_BTN_ADD_CLOSE,225,290,45,21,BS_FLAT
+    PUSHBUTTON      "취 소",IDC_BTN_CANCEL,282,290,45,21,BS_FLAT
+    LTEXT           "사용자 ID",IDC_STATIC,10,58,31,9
+    LTEXT           "추가할 그룹",IDC_STATIC,10,10,39,8
+    EDITTEXT        ID_EB_USERNAME,173,84,82,13,ES_AUTOHSCROLL
+    EDITTEXT        ID_EB_USERID,44,84,82,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "조회",ID_BN_SEARCH,264,81,47,19,BS_FLAT
+    LTEXT           "사용자명",IDC_STATIC,139,86,30,9
+    LTEXT           "사용자ID",IDC_STATIC,10,86,34,9
+    CONTROL         "List1",IDC_LIST_LOGIN_ID,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,105,324,172
+    CONTROL         "검색해서 추가",IDC_RADIO_SEARCH,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,97,34,60,10
+    CONTROL         "사용자 ID를 아는 경우",IDC_RADIO_SELID,"Button",
+                    BS_AUTORADIOBUTTON,10,34,86,10
+    CONTROL         "전체 목록에서 선택",IDC_RADIO_LISTALL,"Button",
+                    BS_AUTORADIOBUTTON,165,34,79,10
+    GROUPBOX        "",IDC_STATIC,3,23,332,28
+    GROUPBOX        "",IDC_STATIC,3,46,332,31
+    GROUPBOX        "",IDC_STATIC,3,72,332,211
+    CONTROL         "Tree1",IDC_TREE_USER_LISTALL,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | 
+                    TVS_FULLROWSELECT | WS_BORDER | WS_TABSTOP,256,37,63,32
+    PUSHBUTTON      "목록 갱신",IDC_BUTTON_UPDATE,7,285,43,16,BS_FLAT
+END
+
+IDD_DIALOG_NEW_USER DIALOGEX 0, 0, 243, 295
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IDMS 사용자 등록"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    EDITTEXT        ID_EB_REG_SID,75,13,78,13,ES_AUTOHSCROLL | ES_NUMBER | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_REG_NAME,75,31,78,13,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_USER_ID,75,49,78,13,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "중복검사(&D)",ID_BTN_DUPID_CHECK,157,49,65,16,BS_FLAT
+    EDITTEXT        ID_EB_PWD,75,67,78,13,ES_PASSWORD | ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_CONFIRM_PWD,75,85,78,13,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_USER_NICK_NAME,75,103,133,13,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL,WS_EX_STATICEDGE
+    COMBOBOX        ID_CB_COMPANY,75,121,78,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        ID_CB_TEAM,75,138,78,127,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        ID_CB_GRADE,75,155,78,127,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "작성",ID_RB_DIARY_YES,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_GROUP,88,177,32,14
+    CONTROL         "미작성",ID_RB_DIARY_NO,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,124,177,39,14
+    EDITTEXT        ID_EB_TELOFC1,75,202,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER | WS_GROUP,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TELOFC2,107,202,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TELOFC3,140,202,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TEL_BRANCH,75,216,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TELHP1,75,230,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TELHP2,107,230,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_TELHP3,140,230,22,13,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "저장(&S)",ID_BN_SAVE,18,266,64,23,BS_FLAT
+    PUSHBUTTON      "재작성(&R)",ID_BTN_REG_RESET,88,266,64,23,BS_FLAT | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "종료(X)",IDCANCEL,155,266,64,23,BS_FLAT
+    LTEXT           "*대화명",IDC_STATIC_REG_USER_NICK_NAME,16,103,48,9
+    LTEXT           "*사용자명",ID_ST_NAME,16,31,48,9,SS_CENTERIMAGE
+    LTEXT           "*사용자ID",ID_ST_ID,16,49,48,9,SS_CENTERIMAGE
+    LTEXT           "*비밀번호",ID_ST_PW1,16,67,48,9,SS_CENTERIMAGE
+    LTEXT           "*비밀번호확인",ID_ST_PW2,16,85,48,9,SS_CENTERIMAGE
+    LTEXT           "*팀",ID_ST_TEAM,16,138,48,9,SS_CENTERIMAGE
+    LTEXT           "사무실전화번호",IDC_STATIC,16,202,48,9,SS_CENTERIMAGE
+    LTEXT           "내선번호",IDC_STATIC,16,216,48,9,SS_CENTERIMAGE
+    LTEXT           "핸드폰번호",IDC_STATIC,16,230,48,9,SS_CENTERIMAGE
+    LTEXT           "*주민번호",ID_ST_JUMIN,16,13,48,9,SS_CENTERIMAGE
+    LTEXT           "-",IDC_STATIC,99,204,8,9
+    LTEXT           "-",IDC_STATIC,132,204,8,9
+    LTEXT           "-",IDC_STATIC,99,232,8,9
+    LTEXT           "-",IDC_STATIC,132,232,8,9
+    LTEXT           "('-'없이입력)",IDC_STATIC,161,15,57,12
+    LTEXT           "*직급",ID_ST_GRADE,16,155,48,9,SS_CENTERIMAGE
+    LTEXT           "*작업일지 작성여부",ID_ST_YESNO,16,180,61,9
+    LTEXT           "(6-8자리)",IDC_STATIC,161,69,48,9
+    LTEXT           "*소속",IDC_STATIC,16,121,48,9,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,3,1,235,255
+END
+
+IDD_DLG_OPTION DIALOGEX 0, 0, 281, 312
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Option"
+FONT 9, "굴림체"
+BEGIN
+    EDITTEXT        IDC_EDIT_NICK_NAME,41,6,236,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확 인",IDC_BTN_OPT_OK,167,287,52,21,BS_FLAT
+    PUSHBUTTON      "취 소",IDC_BTN_OPT_CANCLE,225,287,52,21,BS_FLAT
+    LTEXT           "대화명",IDC_STATIC_NICK,6,8,30,9
+    COMBOBOX        IDC_COMBO_AWAY_SEC,95,25,64,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "자리비움 설정시간(초)",IDC_STATIC,6,29,88,9
+    CONTROL         "자동 로그인",IDC_CHK_AUTO_LOGIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,45,71,11
+    CONTROL         "항상 위로 실행(주화면)",IDC_CHK_ALWAYSONTOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,87,45,101,11
+    CONTROL         "항상 지정된 위치로 파일 받음",IDC_CHK_DOWN_FOLDER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,66,127,11
+    LTEXT           "",IDC_STATIC_DOWN_FOLER,9,83,264,22,WS_BORDER
+    PUSHBUTTON      "경로 설정",IDC_BTN_DOWN_FOLDER,227,66,44,13
+    CONTROL         "메시지 도착시 SOUND",IDC_CHK_USE_SOUND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,164,96,11
+    LTEXT           "",IDC_STATIC_SOUND_PATH,9,179,264,21,WS_BORDER
+    PUSHBUTTON      "설정",IDC_BTN_SELECT_SOUND,117,163,20,12
+    GROUPBOX        "",IDC_STATIC,2,156,276,47
+    GROUPBOX        "",IDC_STATIC,2,58,276,51
+    PUSHBUTTON      "▶",IDC_BTN_PLAY_SOUND,140,163,20,12
+    PUSHBUTTON      "■",IDC_BTN_STOP_SOUND,163,163,20,12
+    GROUPBOX        "",IDC_STATIC,2,201,276,82
+    PUSHBUTTON      "",IDC_COLOURPICKER_ME,41,209,63,15
+    PUSHBUTTON      "",IDC_COLOURPICKER_BUDDY,41,227,63,15
+    PUSHBUTTON      "",IDC_COLOURPICKER_BG,41,245,63,15
+    LTEXT           "내색상",IDC_STATIC,11,213,26,9
+    LTEXT           "상대방",IDC_STATIC,11,231,26,9
+    LTEXT           "배경색",IDC_STATIC,11,249,26,9
+    PUSHBUTTON      "글 꼴",IDC_BUTTON_FONT,41,264,63,15
+    CONTROL         "",IDC_RICHEDIT_EXAMPLE,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_TABSTOP,
+                    110,210,162,67
+    CONTROL         "대화내용 저장 위치 사용자 지정",IDC_CHK_LOG_FOLDER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,114,138,11
+    LTEXT           "",IDC_STATIC_LOG_FOLER,9,130,264,22,WS_BORDER
+    PUSHBUTTON      "경로 설정",IDC_BTN_LOG_FOLDER,227,114,44,13
+    GROUPBOX        "",IDC_STATIC,2,107,276,51
+END
+
+IDD_DLG_CHG_PWD DIALOGEX 0, 0, 207, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "비밀번호 변경"
+FONT 10, "굴림체", 0, 0, 0x1
+BEGIN
+    EDITTEXT        ID_EB_CHANGEPW_ID,97,11,83,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_CHANGEPW_OLD,97,28,83,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_CHANGEPW_NEW,97,45,83,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        ID_EB_CHANGEPW_CONFIRM,97,62,83,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "저장(&S)",ID_BTN_CHANGEPW_SAVE,35,87,48,18,BS_FLAT
+    PUSHBUTTON      "재작성(&R)",ID_BTN_CHANGEPW_RESET,92,87,48,18,BS_FLAT
+    PUSHBUTTON      "종료(&X)",IDCANCEL,149,87,48,18,BS_FLAT
+    RTEXT           "사용자ID",ID_DM10CHANGEPW_ST_ID,43,12,37,8
+    RTEXT           "변경비밀번호",ID_DM10CHANGEPW_ST_PW1,24,46,56,8
+    RTEXT           "변경비밀번호확인",ID_DM10CHANGEPW_ST_PW2,10,63,70,8
+    RTEXT           "기존비밀번호",ID_DM10CHANGEPW_ST_PWOLD,24,29,56,8
+    GROUPBOX        "",IDC_STATIC,7,3,193,78
+END
+
+IDD_DIALOG_MSG DIALOGEX 0, 0, 239, 89
+STYLE DS_SYSMODAL | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATIC_MSG,4,10,233,51,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "확인",IDC_BUTTON_CONFIRM,184,67,52,19,BS_FLAT
+END
+
+IDD_DLG_GRP_MNG DIALOGEX 0, 0, 218, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "그룹관리"
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_GRP_NAME,52,14,159,16,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확 인",IDC_BTN_OK,89,47,56,25,BS_FLAT
+    PUSHBUTTON      "취 소",IDC_BTN_CANCEL,155,47,56,25,BS_FLAT
+    LTEXT           "그룹명",IDC_STATIC_ROLE,5,17,43,12
+    COMBOBOX        IDC_COMBO_CHG_GRP,52,14,159,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_ALLMSG DIALOGEX 0, 0, 414, 289
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+CAPTION "공지 보내기"
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_ALLMSG_STATUS,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,2,37,163,212
+    EDITTEXT        IDC_EDIT_ALLMSG,167,19,243,231,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL,
+                    WS_EX_ACCEPTFILES
+    CONTROL         "수신 못한 상대에게만 재전송",IDC_CHECK_RESEND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,271,139,14
+    DEFPUSHBUTTON   "공지사항 보내기",IDC_BTN_SENDALLMSG,263,258,71,27,
+                    BS_FLAT
+    PUSHBUTTON      "닫 기",IDC_BTN_ALLMSG_OK,339,258,71,27,BS_FLAT
+    LTEXT           "공지 메시지",IDC_STATIC_ALLMSG_INFO,167,4,61,8
+    CONTROL         "전체목록",IDC_RADIO_SELTEAM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,103,16,54,10
+    CONTROL         "현재 선택된 사용자",IDC_RADIO_SELID,"Button",
+                    BS_AUTORADIOBUTTON,9,16,86,10
+    GROUPBOX        "공지 대상",IDC_STATIC,2,4,163,29
+    PUSHBUTTON      "목록 갱신",IDC_BUTTON_UPDATE,109,258,50,16,BS_FLAT
+    CONTROL         "전체 선택",IDC_CHK_SELECT_ALL,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,3,258,50,16
+    CONTROL         "Tree1",IDC_TREE_ALL_MSG,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_NOTOOLTIPS | TVS_CHECKBOXES | WS_BORDER | WS_TABSTOP,
+                    229,4,73,61
+    PUSHBUTTON      "전체 펼치기",IDC_BUTTON_EXPANDALL,55,258,50,16,BS_FLAT
+END
+
+IDD_DIALOG_VIEW_ALLMSG DIALOG DISCARDABLE  0, 0, 310, 245
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "공지 사항"
+MENU IDR_MENU_VIEWALLMSG
+FONT 9, "굴림체"
+BEGIN
+    CONTROL         "",IDC_REDIT_VIEW_ALLMSG,"RICHEDIT",ES_MULTILINE | 
+                    ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,2,3,
+                    305,209
+    DEFPUSHBUTTON   "닫 기",IDC_BTN_VIEW_ALLMSG_OK,243,218,62,23,BS_FLAT
+END
+
+IDD_DLG_WRITE_MSG DIALOGEX 0, 0, 286, 225
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "쪽지 남기기"
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_WRITE_MSG,2,21,282,170,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "",IDC_STATIC_MSGTO,0,3,286,15
+    DEFPUSHBUTTON   "쪽지 남기기",IDC_BTN_WRITE_MSG,158,199,59,20,BS_FLAT
+    PUSHBUTTON      "닫 기",IDC_BTN_WRITE_MSG_CNCL,223,199,59,20,BS_FLAT
+END
+
+IDD_DLG_VIEW_SLIP_MDG DIALOGEX 0, 0, 279, 231
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "쪽지 보기"
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATIC_MSG_FROM,0,3,275,15
+    PUSHBUTTON      "확 인",IDC_BTN_SLIP_MSG_CLOSE,212,205,60,22,BS_FLAT
+    CONTROL         "",IDC_REDIT_SLIP_MSG,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP,2,22,273,177
+END
+
+IDD_DLG_IT_COMP_MNG DIALOG DISCARDABLE  0, 0, 238, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "정보 친구 관리"
+FONT 9, "굴림체"
+BEGIN
+    PUSHBUTTON      "닫 기",IDC_BTN_CLOSE,174,108,59,24,BS_FLAT
+    PUSHBUTTON      "추 가",IDC_BTN_ADD_MODIFY,105,108,59,24,BS_FLAT
+    EDITTEXT        IDC_EDIT_URL,10,74,219,25,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_HSCROLL
+    LTEXT           "인터넷 주소를 입력하세요",IDC_STATIC,10,61,153,8
+    EDITTEXT        IDC_EDIT_DESC,10,19,219,25,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_HSCROLL
+    LTEXT           "간단한 설명을 입력하세요",IDC_STATIC,10,6,153,8
+END
+
+IDD_DLG_MODFY_REPLY DIALOGEX 0, 0, 186, 208
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "응답 설정"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_REPLY0,1,3,183,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "확 인",IDC_BTN_REPLY_OK,99,189,40,17
+    PUSHBUTTON      "취 소",IDC_BTN_REPLY_CANCEL,144,189,40,17
+    EDITTEXT        IDC_EDIT_REPLY1,1,21,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY2,1,39,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY3,1,57,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY4,1,75,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY5,1,93,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY6,1,111,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY7,1,129,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY8,1,147,183,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REPLY9,1,165,183,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_AUTO_APPEND_MSG DIALOG DISCARDABLE  0, 0, 211, 79
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "자동 부착글"
+FONT 9, "굴림"
+BEGIN
+    PUSHBUTTON      "취 소",IDC_BTN_AUTOAPPENDMSG_CANCEL,172,58,36,18,
+                    BS_FLAT
+    PUSHBUTTON      "확 인",IDC_BTN_AUTOAPPENDMSG_OK,133,58,36,18,BS_FLAT
+    EDITTEXT        IDC_EDIT_AUTO_APPEND_MSG,2,2,206,46,ES_AUTOHSCROLL
+END
+
+IDD_DLG_EMOTICON_BASE DIALOGEX 0, 0, 135, 104
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "이모티콘"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+END
+
+IDD_FILERECV_DLG DIALOG DISCARDABLE  0, 0, 310, 219
+STYLE DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "파일 받기"
+FONT 9, "굴림체"
+BEGIN
+    CONTROL         "Progress1",IDC_RECEIVE_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,33,167,274,8
+    PUSHBUTTON      "확 인",IDC_BTN_FILE_CONFIRM,99,192,65,20,BS_FLAT
+    PUSHBUTTON      "취 소",IDC_BTN_FILE_NOT_CONFIRM,239,192,65,20,BS_FLAT
+    EDITTEXT        IDC_EDIT_CONFIRM,3,5,304,51,ES_MULTILINE | ES_READONLY | 
+                    ES_WANTRETURN
+    CONTROL         "Progress1",IDC_RECV_BYTES_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,33,157,274,8
+    LTEXT           "전체",IDC_STATIC_TOTAL,3,167,18,9
+    LTEXT           "파일",IDC_STATIC_FILE,3,157,18,9
+    CONTROL         "List1",IDC_LIST_RECV,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,3,60,304,89
+    LTEXT           "",IDC_STATIC_RECV_AMT,35,178,122,8
+    LTEXT           "Byte",IDC_STATIC_BYTE,3,178,27,8
+    PUSHBUTTON      "받은 폴더 열기",IDC_BTN_OPEN_FILE_FOLDER,169,192,65,20,
+                    BS_FLAT
+END
+
+IDD_FILESEND_DLG DIALOGEX 0, 0, 312, 221
+STYLE DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "파일 보내기"
+FONT 9, "굴림체", 0, 0, 0x1
+BEGIN
+    CONTROL         "Progress1",IDC_SEND_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,29,173,276,8
+    LTEXT           "보내는 파일",IDC_SEND_STATUS,8,5,203,9
+    EDITTEXT        IDC_EDIT_SEND_FILE,7,18,298,37,ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "취 소",IDC_BTN_FILE_SEND_CANCEL,243,187,62,23,BS_FLAT
+    CONTROL         "Progress1",IDC_SEND_BYTES_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,29,163,276,8
+    CONTROL         "List1",IDC_LIST_SEND,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,59,298,100
+    LTEXT           "전체",IDC_STATIC_TOTAL,7,174,18,9
+    LTEXT           "파일",IDC_STATIC_FILE,7,163,18,9
+    LTEXT           "",IDC_STATIC_SENT_AMT,39,206,174,8
+    LTEXT           "Byte",IDC_STATIC_BYTE,7,206,27,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "IdmsMsn MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "IdmsMsn\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "IdmsMsn.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "IdmsMsn 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_ONLINE       BITMAP  DISCARDABLE     "res\\OnLine.bmp"
+IDB_BITMAP_AWAY         BITMAP  DISCARDABLE     "res\\AwaySmall.bmp"
+IDB_BITMAP_OffLine      BITMAP  DISCARDABLE     "res\\OffLine.bmp"
+IDB_BITMAP_USERID       BITMAP  DISCARDABLE     "res\\static_UserID.bmp"
+IDB_BITMAP_PWD          BITMAP  DISCARDABLE     "res\\static_Password.bmp"
+IDB_BITMAP_GRPOPEN      BITMAP  DISCARDABLE     "res\\GrpOpen.bmp"
+IDB_BITMAP_GRPCLOSE     BITMAP  DISCARDABLE     "res\\Group.bmp"
+IDB_BITMAP_BLOCK        BITMAP  DISCARDABLE     "res\\Blocked.bmp"
+IDB_BITMAP_ITCOMP       BITMAP  DISCARDABLE     "res\\IT_COMP.bmp"
+IDB_BITMAP_MYSTATUS_OVER BITMAP  DISCARDABLE     "res\\my_status_over.bmp"
+IDB_BITMAP_MYSTATUS_CLICK BITMAP  DISCARDABLE     "res\\my_status_click.bmp"
+IDB_TOPLEFT             BITMAP  DISCARDABLE     "res\\topleft.bmp"
+IDB_TOPRIGHT            BITMAP  DISCARDABLE     "res\\topright.bmp"
+IDB_BOTTOMLEFT          BITMAP  DISCARDABLE     "res\\leftbottom.bmp"
+IDB_BOTTOMRIGHT         BITMAP  DISCARDABLE     "res\\rightbottom.bmp"
+IDB_BITMAP_ONLINE_B     BITMAP  DISCARDABLE     "res\\onlineB.bmp"
+IDB_BITMAP_SEC_BTN1_CLICKED BITMAP  DISCARDABLE     "res\\sec_btn1.bmp"
+IDB_BITMAP_SEC_BTN2_CLICKED BITMAP  DISCARDABLE     "res\\sec_btn2.bmp"
+IDB_BITMAP_SEC_BTN1_HIDE BITMAP  DISCARDABLE     "res\\sec_btn1_hide.bmp"
+IDB_BITMAP_SEC_BTN1_OVER BITMAP  DISCARDABLE     "res\\sec_btn1_over.bmp"
+IDB_BITMAP_SEC_BTN2_HIDE BITMAP  DISCARDABLE     "res\\sec_btn2_hide.bmp"
+IDB_BITMAP_SEC_BTN2_OVER BITMAP  DISCARDABLE     "res\\sec_btn2_over.bmp"
+IDB_BITMAP_SEC_BTN3_CLICKED BITMAP  DISCARDABLE     "res\\sec_btn3.bmp"
+IDB_BITMAP_SEC_BTN3_HIDE BITMAP  DISCARDABLE     "res\\sec_btn3_hide.bmp"
+IDB_BITMAP_SEC_BTN3_OVER BITMAP  DISCARDABLE     "res\\sec_btn3_over.bmp"
+IDB_BITMAP_BUSY_B       BITMAP  DISCARDABLE     "res\\busyB.bmp"
+IDB_BITMAP_STATUS_BUSY  BITMAP  DISCARDABLE     "res\\busySmall.bmp"
+IDB_BITMAP_ALLMSG_TREE  BITMAP  DISCARDABLE     "res\\bitmap_n.bmp"
+IDB_BITMAP_ALLMSG_STATUS BITMAP  DISCARDABLE     "res\\bitmap_s.bmp"
+IDB_BITMAP_EMOTICON     BITMAP  DISCARDABLE     "res\\EmoticonBMP.bmp"
+IDR_TOOLBAR_EMOTICON    BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MSGER MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "대화상대추가",                IDC_ADDPARTNER
+        MENUITEM "메신저종료",                  ID_CLOSE_MSGER
+    END
+    POPUP "프로그램"
+    BEGIN
+        MENUITEM "IDMS 실행",                   ID_RUN_IDMS
+        MENUITEM "MdbManager",                  ID_RUN_MDB
+        MENUITEM "PacketSender",                ID_RUN_SOCK_TEST
+        MENUITEM "TestTux",                     ID_RUN_TUX_TEST
+        MENUITEM "RS 서버통합 게시판",          ID_RUN_RS_BOARD
+    END
+    POPUP "공지"
+    BEGIN
+        MENUITEM "공지보내기",                  ID_BROADCAST_MSG
+    END
+    POPUP "로그"
+    BEGIN
+        MENUITEM "대화내용",                    ID_VIEW_CHAT_HIST
+        MENUITEM "공지사항",                    ID_VIEW_ALLMSG_HIST
+        MENUITEM "받은 쪽지",                   ID_VIEW_SLIPMSG_LOG
+    END
+    POPUP "도구"
+    BEGIN
+        MENUITEM "환경설정",                    ID_TOOLS_OPTION
+        MENUITEM "About",                       ID_TOOLS_ABOUT
+    END
+END
+
+IDR_MENU_CONVERSATION MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "대화내용저장",                IDC_FILESAVE
+        MENUITEM "닫기",                        IDC_CONV_CLOSE
+    END
+    POPUP "Option"
+    BEGIN
+        MENUITEM "설정",                        IDM_OPTION
+    END
+END
+
+IDR_RIGHT_CLICK_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "RIGHT_CLICK_MENU"
+    BEGIN
+        MENUITEM "상대방에게 파일전송",         IDRCLICK_SENDFILE
+        MENUITEM "대화상대 삭제",               IDRCLICK_DELETE
+        MENUITEM "선택 상대방들에게 공지사항 보내기", IDRCLICK_ALLMSG
+        MENUITEM "멀티 채팅",                   IDRCLICK_MULTICHAT
+        MENUITEM "그룹 변경",                   IDRCLICK_GRP_CHG
+        MENUITEM "쪽지 남기기",                 IDRCLICK_WRITE_MSG
+    END
+END
+
+IDR_RIGHT_GRP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "그룹 메뉴"
+    BEGIN
+        MENUITEM "그룹 추가",                   ID_GRP_MNG_ADD
+        MENUITEM "그룹 삭제",                   ID_GRP_MNG_DEL
+        MENUITEM "그룹 이름 변경",              ID_GRP_MNG_MODIFY
+        MENUITEM "이그룹에 대화상대추가",       ID_GRP_MNG_ADDCOMP
+        MENUITEM "이그룹에 공지보내기",         ID_GRP_MNG_ALLMSG
+        MENUITEM "이그룹에 파일전송",           ID_GRP_MNG_SENDFILE
+        MENUITEM "즐겨찾기 추가",               ID_GRP_MNG_ADD_ITCOMP
+    END
+END
+
+IDR_TRAY_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "TRAY_MENU"
+    BEGIN
+        MENUITEM "원래 크기로",                 ID_TRAYMENU_RESTORE
+        MENUITEM SEPARATOR
+        MENUITEM "IDMS",                        ID_TRAYMENU_IDMS
+        MENUITEM SEPARATOR
+        MENUITEM "MdbManager",                  ID_TRAYMENU_MDB
+        MENUITEM SEPARATOR
+        MENUITEM "PacketSender",                ID_TRAYMENU_SOCKTEST
+        MENUITEM SEPARATOR
+        MENUITEM "TestTux",                     ID_TRAYMENU_TUXTEST
+        MENUITEM SEPARATOR
+        MENUITEM "종료",                        IDRTRAYMENU_QUIT
+    END
+END
+
+IDR_MENU_VIEWALLMSG MENU DISCARDABLE 
+BEGIN
+    POPUP "파일"
+    BEGIN
+        MENUITEM "파일 저장",                   IDC_ALLMSG_FILESAVE
+        MENUITEM "닫기",                        IDC_ALLMSG_CLOSE
+    END
+    POPUP "공지 이력"
+    BEGIN
+        MENUITEM "공지사항 로그보기 ",          IDC_ALLMSG_HIST
+    END
+END
+
+IDR_MENU_ITCOMP MENU DISCARDABLE 
+BEGIN
+    POPUP "ITCOMP_MENU"
+    BEGIN
+        MENUITEM "즐겨찾기 삭제",               IDRCLICK_ITCOMP_DEL
+        MENUITEM "즐겨찾기 변경",               IDRCLICK_ITCOMP_MODIFY
+        MENUITEM "즐겨찾기 추가",               IDRCLICK_ITCOMP_ADD
+    END
+END
+
+IDR_MENU_MY_STATUS MENU DISCARDABLE 
+BEGIN
+    POPUP "MyStatus"
+    BEGIN
+        MENUITEM "온라인",                      IDM_MYSTATUS_ONLINE
+        MENUITEM "다른용무중",                  IDM_MYSTATUS_BUSY
+        MENUITEM "자리비움",                    IDM_MYSTATUS_AWAY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLG_OPTION DLGINIT
+BEGIN
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x2031, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x2033, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x2035, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x3031, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x3531, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x3032, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 6, 0
+0x3033, 0xba20, 0x00d0, 
+    IDC_COMBO_AWAY_SEC, 0x403, 9, 0
+0xb3bc, 0xa4c1, 0xc8be, 0xd4c7, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DLG_MODFY_REPLY, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 184
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_DLG_AUTO_APPEND_MSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 208
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_DLG_EMOTICON_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 133
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_FILERECV_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_FILESEND_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_EMOTICON TOOLBAR DISCARDABLE  20, 20
+BEGIN
+    BUTTON      ID_BUTTON32824
+    BUTTON      ID_BUTTON32825
+    BUTTON      ID_BUTTON32826
+    BUTTON      ID_BUTTON32827
+    BUTTON      ID_BUTTON32828
+    BUTTON      ID_BUTTON32829
+    BUTTON      ID_BUTTON32830
+    BUTTON      ID_BUTTON32831
+    BUTTON      ID_BUTTON32832
+    BUTTON      ID_BUTTON32833
+    BUTTON      ID_BUTTON32834
+    BUTTON      ID_BUTTON32835
+    BUTTON      ID_BUTTON32836
+    BUTTON      ID_BUTTON32837
+    BUTTON      ID_BUTTON32838
+    BUTTON      ID_BUTTON32839
+    BUTTON      ID_BUTTON32840
+    BUTTON      ID_BUTTON32841
+    BUTTON      ID_BUTTON32842
+    BUTTON      ID_BUTTON32843
+    BUTTON      ID_BUTTON32844
+    BUTTON      ID_BUTTON32845
+    BUTTON      ID_BUTTON32846
+    BUTTON      ID_BUTTON32847
+    BUTTON      ID_BUTTON32848
+    BUTTON      ID_BUTTON32849
+    BUTTON      ID_BUTTON32850
+    BUTTON      ID_BUTTON32851
+    BUTTON      ID_BUTTON32852
+    BUTTON      ID_BUTTON32853
+    BUTTON      ID_BUTTON32854
+    BUTTON      ID_BUTTON32855
+    BUTTON      ID_BUTTON32856
+    BUTTON      ID_BUTTON32857
+    BUTTON      ID_BUTTON32858
+    BUTTON      ID_BUTTON32859
+    BUTTON      ID_BUTTON32860
+    BUTTON      ID_BUTTON32861
+    BUTTON      ID_BUTTON32862
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "IdmsMsn 정보(&A)..."
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\IdmsMsn.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

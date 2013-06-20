@@ -1,0 +1,112 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "IDMS_Server"=.\IDMS_Server\IDMS_Server.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/IDMS_Server", KCAAAAAA
+    .\IDMS_Server
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IdmsMsn"=.\IdmsMsn\IdmsMsn.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/IdmsMsn", WEAAAAAA
+    .\IdmsMsn
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name dormant
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UpdateManager"=.\UpdateManager\UpdateManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "dormant"=.\dormant\dormant.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/dormant", GTAAAAAA
+    .\dormant
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "sec2_DLL"=.\sec2_DLL\sec2_DLL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/sec2_DLL", ROAAAAAA
+    .\sec2_DLL
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "sec3_DLL"=.\sec3_DLL\sec3_DLL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/sec3_DLL", PPAAAAAA
+    .\sec3_dll
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

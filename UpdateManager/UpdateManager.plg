@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: UpdateManager - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP18D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\include" /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"..\Debug\UpdateManager/" /Fp"..\Debug\UpdateManager/UpdateManager.pch" /Yu"stdafx.h" /Fo"..\Debug\UpdateManager/" /Fd"..\Debug\UpdateManager/" /FD /GZ /c 
+"D:\DATA\My_Dev\IDMS_MSN\UpdateManager\INIManager.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP18D.tmp" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP18E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"..\LibDebug/UpdateManager.pdb" /debug /machine:I386 /out:"..\BinDebug\UpdateManager.exe" /pdbtype:sept /libpath:"..\LibDebug" 
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\DBWrapper.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\INIManager.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\OraObjOleDB.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\SelectServer.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\StdAfx.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\UpdateManager.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\UpdateManagerDlg.obj
+\DATA\My_Dev\IDMS_MSN\Debug\UpdateManager\UpdateManager.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP18E.tmp"
+<h3>Output Window</h3>
+Compiling...
+INIManager.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+UpdateManager.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

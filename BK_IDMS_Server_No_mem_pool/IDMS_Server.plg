@@ -1,0 +1,77 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IDMS_Server - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"../Release/IDMS_Server/IDMS_Server.res" /d "NDEBUG" /d "_AFXDLL" "D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\IDMS_Server.rc"" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91D.tmp" with contents
+[
+/nologo /MD /W4 /GX /ZI /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FAcs /Fa"../Release/IDMS_Server/" /FR"../Release/IDMS_Server/" /Fp"../Release/IDMS_Server/IDMS_Server.pch" /Yu"stdafx.h" /Fo"../Release/IDMS_Server/" /Fd"../Release/IDMS_Server/" /FD /c 
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\ControlPos.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\DbLoginDlg.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\FoodMenuDlg.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\IDMS_Server.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\IDMS_ServerDlg.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\INIManager.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\Log.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\MemoryPool.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\msjexhnd.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\OraObjectArray.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\ThreadSockAsyncServer.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91D.tmp" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91E.tmp" with contents
+[
+/nologo /MD /W4 /GX /ZI /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FAcs /Fa"../Release/IDMS_Server/" /FR"../Release/IDMS_Server/" /Fp"../Release/IDMS_Server/IDMS_Server.pch" /Yc"stdafx.h" /Fo"../Release/IDMS_Server/" /Fd"../Release/IDMS_Server/" /FD /c 
+"D:\DATA\My_Dev\IDMS_MSN\IDMS_Server\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91E.tmp" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91F.tmp" with contents
+[
+/nologo /base:"0x64000000" /subsystem:windows /incremental:no /pdb:"../Release/IDMS_Server/IDMS_Server.pdb" /map:"../Release/IDMS_Server/IDMS_Server.map" /debug /machine:I386 /out:"../BinRelease/IDMS_Server.exe" 
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\ControlPos.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\DbLoginDlg.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\FoodMenuDlg.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\IDMS_Server.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\IDMS_ServerDlg.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\INIManager.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\Log.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\MemoryPool.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\msjexhnd.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\OraObjectArray.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\StdAfx.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\ThreadSockAsyncServer.obj
+\DATA\My_Dev\IDMS_MSN\Release\IDMS_Server\IDMS_Server.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP91F.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ControlPos.cpp
+DbLoginDlg.cpp
+FoodMenuDlg.cpp
+IDMS_Server.cpp
+IDMS_ServerDlg.cpp
+INIManager.cpp
+Log.cpp
+MemoryPool.cpp
+msjexhnd.cpp
+OraObjectArray.cpp
+ThreadSockAsyncServer.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+   Creating library ../BinRelease/IDMS_Server.lib and object ../BinRelease/IDMS_Server.exp
+
+
+
+<h3>Results</h3>
+IDMS_Server.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

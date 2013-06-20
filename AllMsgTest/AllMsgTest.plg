@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AllMsgTest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP14.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/AllMsgTest.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\AllMsgTest\AllMsgTestDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP14.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/AllMsgTest.pdb" /debug /machine:I386 /out:"Debug/AllMsgTest.exe" /pdbtype:sept  .\Debug\AllMsgTest.obj .\Debug\AllMsgTestDlg.obj .\Debug\StdAfx.obj .\Debug\AllMsgTest.res "
+<h3>Output Window</h3>
+Compiling...
+AllMsgTestDlg.cpp
+D:\AllMsgTest\AllMsgTestDlg.cpp(39) : warning C4114: same type qualifier used more than once
+D:\AllMsgTest\AllMsgTestDlg.cpp(303) : warning C4101: 'm_InternetAddr' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+AllMsgTest.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

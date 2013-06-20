@@ -1,0 +1,7 @@
+; sec3_DLL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "sec3_DLL"
+DESCRIPTION  'sec3_DLL Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

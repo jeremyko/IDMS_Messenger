@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sec3_DLL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP828.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"../Release/Sec3/sec3_DLL.pch" /Yu"stdafx.h" /Fo"../Release/Sec3/" /Fd"../Release/Sec3/" /FD /c 
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\BtnST.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\ButtonIconSelect.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\CalendarCtrl.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\CalNumberEdit.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\ControlPos.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\DataManager.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\IconSelector.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\KoreanDate.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\MemoItemDlg.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\sec3_DLL.cpp"
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\Sec3Dlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP828.tmp" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP829.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"../Release/Sec3/sec3_DLL.pch" /Yc"stdafx.h" /Fo"../Release/Sec3/" /Fd"../Release/Sec3/" /FD /c 
+"D:\DATA\My_Dev\IDMS_MSN\sec3_DLL\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP829.tmp" 
+Creating temporary file "C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP82A.tmp" with contents
+[
+imm32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"../Release/Sec3/sec3_DLL.pdb" /machine:I386 /def:".\sec3_DLL.def" /out:"../BinRelease/sec3_DLL.dll" /implib:"../Release/Sec3/sec3_DLL.lib" 
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\BtnST.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\ButtonIconSelect.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\CalendarCtrl.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\CalNumberEdit.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\ControlPos.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\DataManager.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\IconSelector.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\KoreanDate.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\MemoItemDlg.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\sec3_DLL.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\Sec3Dlg.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\StdAfx.obj
+\DATA\My_Dev\IDMS_MSN\Release\Sec3\sec3_DLL.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kojh\LOCALS~1\Temp\RSP82A.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+BtnST.cpp
+ButtonIconSelect.cpp
+CalendarCtrl.cpp
+CalNumberEdit.cpp
+ControlPos.cpp
+DataManager.cpp
+IconSelector.cpp
+KoreanDate.cpp
+MemoItemDlg.cpp
+sec3_DLL.cpp
+Sec3Dlg.cpp
+Generating Code...
+Linking...
+   Creating library ../Release/Sec3/sec3_DLL.lib and object ../Release/Sec3/sec3_DLL.exp
+
+
+
+<h3>Results</h3>
+sec3_DLL.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IDMS_Server", "IDMS_Server.vcproj", "{251E6F3F-1172-4C23-A36B-CF6402CD9176}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientMessenger", "..\ClientMessenger\ClientMessenger.vcproj", "{CD476535-812D-487A-8764-A39DC95E1578}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{251E6F3F-1172-4C23-A36B-CF6402CD9176}.Debug.ActiveCfg = Debug|Win32
+		{251E6F3F-1172-4C23-A36B-CF6402CD9176}.Debug.Build.0 = Debug|Win32
+		{251E6F3F-1172-4C23-A36B-CF6402CD9176}.Release.ActiveCfg = Release|Win32
+		{251E6F3F-1172-4C23-A36B-CF6402CD9176}.Release.Build.0 = Release|Win32
+		{CD476535-812D-487A-8764-A39DC95E1578}.Debug.ActiveCfg = Debug|Win32
+		{CD476535-812D-487A-8764-A39DC95E1578}.Debug.Build.0 = Debug|Win32
+		{CD476535-812D-487A-8764-A39DC95E1578}.Release.ActiveCfg = Release|Win32
+		{CD476535-812D-487A-8764-A39DC95E1578}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
