@@ -113,3 +113,6 @@ VC6 경우는
 
  이경로를 제일 top으로 설정후에 idms소스 중 서버를 rebuild all .
 
+LICENSE
+
+This projected is licensed under the terms of the BSD license.
